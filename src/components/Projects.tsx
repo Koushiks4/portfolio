@@ -10,7 +10,7 @@ const PROJECTS = [
             'A real-time F1 racing leaderboard built on Apache Kafka streaming infrastructure that processes live telemetry data to render live position updates, lap times, and gap analytics. Powered by an AI commentary engine that generates dynamic race insights using LLMs connected to the live event stream.',
         tags: ['Apache Kafka', 'React', 'Python', 'AI/LLM', 'Data Streaming', 'TypeScript'],
         links: {
-            github: 'https://github.com/Koushiks4/f1-leaderboard-v2',
+            github: 'https://github.com/kos-conf/f1-leaderboard-v2',
         },
         highlight: true,
         icon: '🏎️',
@@ -24,7 +24,7 @@ const PROJECTS = [
             'A comprehensive, hands-on workshop guide for developers learning to build real-time data streaming applications. Walks through building live dashboards from scratch using Kafka topics, consumers, and producer pipelines.',
         tags: ['Apache Kafka', 'Python', 'Workshop', 'Data Engineering'],
         links: {
-            github: 'https://github.com/Koushiks4/f1-leaderboard-workshop',
+            github: 'https://github.com/kos-conf/f1-leaderboard-workshop',
         },
         highlight: false,
         icon: '📡',
@@ -32,18 +32,16 @@ const PROJECTS = [
         stat2: { label: 'Type', value: 'Open Source' },
     },
     {
-        name: 'Confluent CLI Plugins',
-        subtitle: 'Developer Tooling & Automation',
+        name: 'Custom Internal Tools',
+        subtitle: 'Productivity & Developer Experience',
         description:
-            'Custom CLI plugins that extend the Confluent CLI to automate common streaming infrastructure operations — reducing toil and enabling data engineers to manage Kafka clusters with purpose-built commands.',
-        tags: ['CLI', 'Kafka', 'Automation', 'DevOps', 'Go'],
-        links: {
-            github: 'https://github.com/Koushiks4',
-        },
+            'Internal tooling built to streamline workflows, automate repetitive tasks, and boost team productivity — enabling engineers to ship faster with less toil and better visibility into systems.',
+        tags: ['CLI', 'Automation', 'DevOps', 'Internal Tooling'],
+        links: {},
         highlight: false,
         icon: '⚙️',
-        stat1: { label: 'Focus', value: 'Engineering Velocity' },
-        stat2: { label: 'Stack', value: 'Go + Shell' },
+        stat1: { label: 'Focus', value: 'Productivity' },
+        stat2: { label: 'Impact', value: 'Engineering velocity' },
     },
 ];
 
