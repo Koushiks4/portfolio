@@ -83,7 +83,7 @@ export default function Experience() {
                     <h2 className="section-title">Work <span>Experience</span></h2>
                     <div className="divider" />
                     <p className="section-desc">
-                        4+ years at Confluent, evolving from software engineering to senior architecture — always at the cutting edge of real-time data infrastructure.
+                        6+ years of cloud software engineering across Confluent and Oracle, building real-time data infrastructure with a strong focus on scalability, reliability, and modern cloud-native practices.
                     </p>
                 </div>
 
