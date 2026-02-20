@@ -1,0 +1,109 @@
+.groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.group {
+    padding: 28px;
+}
+
+.groupHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.groupIcon {
+    font-size: 1.4rem;
+}
+
+.groupLabel {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+}
+
+.skillList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skillRow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skillMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillName {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.skillPct {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--teal);
+}
+
+.barTrack {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), var(--cyan));
+    border-radius: 2px;
+    width: 0%;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(0, 224, 255, 0.4);
+}
+
+.badgeSection {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+}
+
+.badgeTitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: var(--font-mono);
+    margin-bottom: 20px;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    font-size: 0.78rem !important;
+    padding: 5px 14px !important;
+    transition: var(--transition);
+}
+
+.badge:hover {
+    background: rgba(0, 224, 255, 0.12) !important;
+    border-color: rgba(0, 224, 255, 0.3) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--teal-glow);
+}

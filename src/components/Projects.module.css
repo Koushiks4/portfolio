@@ -1,0 +1,134 @@
+.section {
+    background: var(--bg-secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.featured {
+    border-color: rgba(0, 224, 255, 0.25) !important;
+    background: linear-gradient(135deg, rgba(0, 224, 255, 0.04), var(--bg-card)) !important;
+    box-shadow: 0 0 40px rgba(0, 224, 255, 0.06);
+}
+
+.featured:hover {
+    box-shadow: 0 0 60px rgba(0, 224, 255, 0.15) !important;
+}
+
+.featuredBadge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--bg-primary);
+    background: linear-gradient(135deg, var(--teal), var(--cyan));
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.iconWrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--teal);
+    margin-top: -8px;
+}
+
+.desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.statVal {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.statLabel {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statDivider {
+    width: 1px;
+    height: 32px;
+    background: var(--border);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.links {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.linkBtn {
+    font-size: 0.8rem !important;
+    padding: 8px 16px !important;
+}
+
+.linkIcon {
+    width: 14px;
+    height: 14px;
+}

@@ -1,0 +1,143 @@
+.section {
+    background: var(--bg-secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.type {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.iconWrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.talkIcon {
+    width: 22px;
+    height: 22px;
+    color: var(--teal);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+.event,
+.location,
+.date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-muted);
+}
+
+.event {
+    color: var(--teal);
+    font-weight: 500;
+}
+
+.metaIcon {
+    width: 13px;
+    height: 13px;
+}
+
+.sep {
+    color: var(--text-muted);
+}
+
+.desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* CTA card */
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 224, 255, 0.04), var(--bg-card)) !important;
+    border-color: rgba(0, 224, 255, 0.15) !important;
+}
+
+.ctaInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.ctaIcon {
+    width: 40px;
+    height: 40px;
+    color: var(--teal);
+}
+
+.ctaTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.ctaDesc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    max-width: 380px;
+    line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

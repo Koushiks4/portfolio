@@ -1,0 +1,78 @@
+.section {
+    background: var(--bg-secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-decoration: none;
+    cursor: none;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.readTime {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.card:hover .title {
+    color: var(--teal);
+}
+
+.excerpt {
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.readMore {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--teal);
+    margin-top: auto;
+    transition: gap 0.2s;
+}
+
+.card:hover .readMore {
+    gap: 10px;
+}
+
+.arrow {
+    width: 14px;
+    height: 14px;
+}
+
+.mediumCta {
+    display: flex;
+    justify-content: center;
+}
+
+.mediumIcon {
+    width: 18px;
+    height: 18px;
+}

@@ -1,0 +1,374 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---- Content ---- */
+.content {
+    flex: 1;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--teal);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    animation: fadeSlideIn 0.6s ease both;
+}
+
+.greetingLine {
+    display: inline-block;
+    width: 32px;
+    height: 1.5px;
+    background: var(--teal);
+}
+
+.name {
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #e8f4f8 30%, var(--teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeSlideIn 0.6s 0.1s ease both;
+}
+
+.roleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    margin-bottom: 24px;
+    animation: fadeSlideIn 0.6s 0.2s ease both;
+}
+
+.roleCaret {
+    font-family: var(--font-mono);
+    color: var(--teal);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.role {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.cursor {
+    font-family: var(--font-mono);
+    color: var(--teal);
+    font-size: 1.2rem;
+    animation: blink 0.9s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.tagline {
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    color: var(--text-secondary);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    animation: fadeSlideIn 0.6s 0.3s ease both;
+}
+
+.highlight {
+    color: var(--teal);
+    font-weight: 600;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    animation: fadeSlideIn 0.6s 0.35s ease both;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.metaIcon {
+    width: 14px;
+    height: 14px;
+    color: var(--teal);
+}
+
+.metaDot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--text-muted);
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    animation: fadeSlideIn 0.6s 0.4s ease both;
+}
+
+.socials {
+    display: flex;
+    gap: 12px;
+    animation: fadeSlideIn 0.6s 0.5s ease both;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.socialLink:hover {
+    color: var(--teal);
+    border-color: var(--border-hover);
+    background: var(--teal-dim);
+    box-shadow: var(--teal-glow);
+    transform: translateY(-2px);
+}
+
+.socialIcon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ---- Portrait ---- */
+.portrait {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeSlideIn 0.6s 0.2s ease both;
+}
+
+.portraitGlow {
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(0, 224, 255, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.portraitRing {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, rgba(0, 224, 255, 0.4), rgba(0, 180, 216, 0.1), rgba(0, 224, 255, 0.4)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.portraitWrap {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(0, 224, 255, 0.2);
+    position: relative;
+}
+
+.portraitImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(10%) contrast(1.05);
+    transition: filter 0.3s;
+}
+
+.portraitWrap:hover .portraitImg {
+    filter: grayscale(0%) contrast(1.08);
+}
+
+.badge {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 224, 255, 0.2);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.badgeDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #39ff14;
+    box-shadow: 0 0 8px #39ff14;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(0.7);
+    }
+}
+
+/* ---- Scroll hint ---- */
+.scrollHint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+}
+
+.scrollHint span {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.scrollLine {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+    animation: scrollAnim 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollAnim {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* ---- Shared enter animation ---- */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .inner {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 48px;
+    }
+
+    .greeting,
+    .meta,
+    .socials {
+        justify-content: center;
+    }
+
+    .actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tagline {
+        margin: 0 auto 28px;
+    }
+
+    .portraitWrap {
+        width: 220px;
+        height: 220px;
+    }
+}
